@@ -42,7 +42,7 @@ const app = new Vue (
         },
         
         methods: {
-            // aggiunge testo al promemoria
+            // aggiungi testo
             removeElement(index) {
                 this.memorandum.splice (index, 1)
             },
@@ -53,7 +53,7 @@ const app = new Vue (
                     this.newMemorandum = "";
                 }
             },
-            // sbarra l'elemento se è stato fatto (done = true)
+            // sbarra elemento se =done
             toggle(index) {
                 this.memorandum[index].done = !this.memorandum[index].done
             }

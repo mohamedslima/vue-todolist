@@ -36,11 +36,11 @@
             </div>
             <div class="list-item">
                 <ul>
-                    <li v-for="todo in memorandum">
-                        <div>
-                            {{ todo.text }}
-                        </div>
-                        <div class="remove-element">
+                    <li v-for="(element, index) in memorandum" :class="element.done ? 'done' : ''">
+                        <span @click="toggle(index)">
+                            {{ element.text }}
+                        </span>
+                        <div class="remove-element" @click="removeElement(index)">
                             X
                         </div>
                     </li>
