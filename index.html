@@ -18,22 +18,22 @@
     </header>
     <div id="root">
         <main>
-            <div>
-                <label for="text">
+            <div class="adding-section">
+                <label for="text"> 
+                    <input type="text" placeholder="aggiungi un memorandum">
                 </label>
-                <input type="text">
                 <button class="add">
                     Aggiungi
                 </button>
             </div>
             <div class="list-item">
                 <ul>
-                    <li>
+                    <li v-for="todo in memorandum">
                         <div>
-                            
+                            {{ todo.text }}
                         </div>
-                        <div>
-
+                        <div class="remove-element">
+                            X
                         </div>
                     </li>
                 </ul>
