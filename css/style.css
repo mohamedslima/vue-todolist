@@ -65,3 +65,7 @@ main > div.list-item > ul > li {
 div.remove-element {
     cursor: pointer;
 }
+
+.done span {
+    text-decoration: line-through;
+}

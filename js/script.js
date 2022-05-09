@@ -14,7 +14,7 @@
 // Bonus:
 // 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
-
+Vue.config.devtools = true;
 
 const app = new Vue (
     {
@@ -42,6 +42,10 @@ const app = new Vue (
         },
         
         methods: {
+            // aggiunge testo al promemoria
+            removeElement(index) {
+                this.memorandum.splice (index, 1)
+            },
             addMemorandum() {                
                 const newString = this.newMemorandum.trim();
                 if (newString.length > 1) {
@@ -49,6 +53,10 @@ const app = new Vue (
                     this.newMemorandum = "";
                 }
             },
+            // sbarra l'elemento se è stato fatto (done = true)
+            toggle(index) {
+                this.memorandum[index].done = !this.memorandum[index].done
+            }
         }
 
     }
