@@ -15,7 +15,6 @@
 // 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
-Vue.config.devtools = true
 
 const app = new Vue (
     {
@@ -38,10 +37,18 @@ const app = new Vue (
                     text: "1h di palestra",
                     done: true
                 }
-            ]
+            ],
+            newMemorandum: "",
         },
+        
         methods: {
-            
+            addMemorandum() {                
+                const newString = this.newMemorandum.trim();
+                if (newString.length > 1) {
+                    this.memorandum.push({text:newString, done:false});
+                    this.newMemorandum = "";
+                }
+            },
         }
 
     }
