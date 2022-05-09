@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(159, 192, 253, 0.681);
+    padding: 3rem;
+}
+
+header > h1 {
+    color: rgb(0, 0, 143);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* MAIN */
+main {
+    background-color:rgba(167, 196, 249, 0.479);
+}
